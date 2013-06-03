@@ -1,0 +1,30 @@
+{ 
+	"name": "Right Click Alert",
+	"version": "1.0",
+	"description": "Prevent visitor when right clicking on picture",
+	"demo": "http://www.pushreset.fr",
+	"author": {
+		"name": "Julien Duvignau",
+		"link": "http://www.pushreset.fr"
+	},
+	"data": {
+	    "message_text": {
+	      "label": "Message to display",
+	      "info": "The message to display when visitor do a right click on image content, html allowed.",
+	      "type": "string",
+	      "placeholder": "© This photography is copyrighted, please contact me for commercial use",
+	      "validation": {
+	        "type": "not_empty"
+	      }
+	    },
+	    "active_download_link": {
+	      "label": "Enable download link",
+	      "info": "User can see a download link for the current photo ?",
+	      "type": "select",
+					"options": [
+						{ "label": "disable", "value": 0 },
+						{ "label": "enable", "value": 1 }
+					]
+	    }
+	}
+}
