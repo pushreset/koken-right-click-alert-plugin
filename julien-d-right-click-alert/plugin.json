@@ -18,13 +18,28 @@
 	      }
 	    },
 	    "active_download_link": {
-	      "label": "Enable download link",
+	      "label": "Show download link",
 	      "info": "User can see a download link for the current photo ?",
 	      "type": "select",
 					"options": [
-						{ "label": "disable", "value": 0 },
-						{ "label": "enable", "value": 1 }
+						{ "label": "disabled", "value": 0 },
+						{ "label": "enabled", "value": 1 }
 					]
+	    },
+	    "active_custom_selector": {
+	      "label": "Use custom selector",
+	      "type": "select",
+					"options": [
+						{ "label": "disabled", "value": 0 },
+						{ "label": "append to default selector", "value": 1 },
+						{ "label": "replace default selector", "value": 2 }
+					]
+	    },
+	    "custom_selector": {
+	      "label": "Custom selector",
+	      "info": "A custom selector to apply right click alert. By default: 'img.content, .k-content-embed img'",
+	      "type": "string",
+	      "placeholder": "sizzle selector, example : .my_class"
 	    }
 	}
 }

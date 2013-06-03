@@ -14,6 +14,24 @@ class JulienDRightClickAlert extends KokenPlugin {
 		$message 			= addslashes($this->data->message_text);
 		$enable_dwld_link 	= $this->data->active_download_link == 1 ? 'true': 'false';;
 
+		$base_selector = 'img.content, .k-content-embed img';
+
+		switch ( $this->data->active_custom_selector ) {
+			
+			case 1:
+				$selector = $base_selector.', '.$this->data->custom_selector;
+				break;
+			case 2:
+				$selector = $this->data->custom_selector;
+				break;		
+			case 0:
+			default:
+				$selector = $base_selector;
+				break;
+				
+				break;
+		}
+
 		echo <<<OUT
 <script type="text/javascript">
 /* Right Click Alert Plugin */
@@ -52,7 +70,7 @@ class JulienDRightClickAlert extends KokenPlugin {
 		clearTimeout(RCAP.timer);
 	};
 
-	$(document).on("contextmenu", "img.content, .k-content-embed img", function(e){
+	$(document).on("contextmenu", "{$selector}", function(e){
 	  	RCAP.displayContextAlert(e, $(this));
 	   	return false;
 	});
