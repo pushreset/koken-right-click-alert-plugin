@@ -80,19 +80,28 @@ class JulienDRightClickAlert extends KokenPlugin {
 <style type="text/css">
 	#rcap-context{
 		position:absolute;
-		background-color:#ffffff;
-		color:#000000;
-		border-radius:2px 2px 2px 2px;
-		padding:5px 10px;
+		border-radius:4px 4px 4px 4px;
 		box-shadow:0 0 5px #222222;
 		z-index: 4242;
+		overflow: hidden;
+		font-size:10px;
+		color:#f5f6f8;
+	}
+	#rcap-context .rcap-message{
+		padding:5px 10px;
+		background-color:#f34642;
+	}
+	#rcap-context .rcap-dwld-link{
+		border-top: solid 1px #d4d4d4;
+		background-color:#1a232a;
+		text-align:center;
+		font-size:8px;
+		padding:2px 10px;
+		text-transform:uppercase;
 	}
 
-	#rcap-context .rcap-dwld-link{
-		text-align:center;
-		font-size:10px;
-		margin:5px 0 0 0;
-		text-transform:uppercase;
+	#rcap-context a{
+		color:#f9a90a;
 	}
 </style>
 
