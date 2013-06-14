@@ -14,7 +14,7 @@ class JulienDRightClickAlert extends KokenPlugin {
 		$message 			= addslashes($this->data->message_text);
 		$enable_dwld_link 	= $this->data->active_download_link == 1 ? 'true': 'false';;
 
-		$base_selector = 'img.content, .k-content-embed img';
+		$base_selector = 'img.content, .k-content-embed img, .item img, #content img, #lane .cell img, .thumbs img, .mag img, .list-image img, #home-albums img, .img-wrap img';
 
 		switch ( $this->data->active_custom_selector ) {
 			

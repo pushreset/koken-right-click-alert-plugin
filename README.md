@@ -3,7 +3,7 @@ Right click alert plugin for Koken
 
 Koken plugin for prevent right click on image content and displaying a custom message.
 
-Tested on <a href="http://koken.me/">Koken</a> v0.8.5 with Chastain theme.
+Tested on <a href="http://koken.me/">Koken</a> v0.8.5 with <del>Chastain</del> all natives themes.
 
 <h3>Installation</h3>
 
@@ -27,4 +27,3 @@ Tested on <a href="http://koken.me/">Koken</a> v0.8.5 with Chastain theme.
 <h3>Examples</h3>
 
 <p>Try a right click on a picture : http://www.pushreset.fr/albums/urban-japan/content/urban-japan-3/</p>
-

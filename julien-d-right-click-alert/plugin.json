@@ -37,7 +37,7 @@
 	    },
 	    "custom_selector": {
 	      "label": "Custom selector",
-	      "info": "A custom selector to apply right click alert. By default: 'img.content, .k-content-embed img'",
+	      "info": "A custom selector to apply right click alert. By default: 'img.content, .k-content-embed img, .item img, #content img, #lane .cell img, .thumbs img, .mag img, .list-image img, #home-albums img, .img-wrap img'",
 	      "type": "string",
 	      "placeholder": "sizzle selector, example : .my_class"
 	    }
