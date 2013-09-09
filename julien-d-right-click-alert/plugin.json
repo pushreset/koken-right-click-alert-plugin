@@ -17,6 +17,15 @@
 	        "type": "not_empty"
 	      }
 	    },
+	    "box_width": {
+	      "label": "Box width",
+	      "info": "Set in pixels the width of the message box",
+	      "type": "string",
+	      "value": "320",
+	      "validation": {
+	        "type": "not_empty"
+	      }
+	    },
 	    "active_download_link": {
 	      "label": "Show download link",
 	      "info": "User can see a download link for the current photo ?",

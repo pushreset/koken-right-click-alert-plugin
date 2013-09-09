@@ -12,7 +12,8 @@ class JulienDRightClickAlert extends KokenPlugin {
 	{
 
 		$message 			= addslashes($this->data->message_text);
-		$enable_dwld_link 	= $this->data->active_download_link == 1 ? 'true': 'false';;
+		$enable_dwld_link 	= $this->data->active_download_link == 1 ? 'true': 'false';
+		$box_width			= $this->data->box_width;
 
 		$base_selector = 'img.content, .k-content-embed img, .item img, #content img, #lane .cell img, .thumbs img, .mag img, .list-image img, #home-albums img, .img-wrap img, .pulse-main-container img';
 
@@ -43,13 +44,28 @@ class JulienDRightClickAlert extends KokenPlugin {
 	RCAP.displayContextAlert = function displayContextAlert(event, element){
 		RCAP.removeContextAlert();
 
+		var boxSize 		= '{$box_width}';
+		var clickPosition 	= event.clientX;
+		var windowWidth 	= $(window).width();
+
+		var xPosition = event.pageX - (boxSize/2);
+		var yPosition = event.pageY;
+
+		// detect if box hidden on horizontal themes
+		if( (windowWidth - clickPosition) < (boxSize/2) ){
+			xPosition = xPosition - (boxSize/2);
+		}
+		else if( clickPosition < (boxSize/2) ){
+			xPosition = xPosition + (boxSize/2);
+		}
+
 		var partialTpl = '';
 
 		if(RCAP.enableDwldLink){
 			partialTpl = partialTpl + '<div class="rcap-dwld-link"><a href="'+element.attr('src')+'" target="_blank">Download</a></div>';
 		}
 
-		$('body').append('<div id="rcap-context" style="left:'+event.pageX+'px;top:'+event.pageY+'px;"><div class="rcap-message">{$message}</div>'+partialTpl+'</div>');
+		$('body').append('<div id="rcap-context" style="left:'+xPosition+'px;top:'+yPosition+'px;"><div class="rcap-message">{$message}</div>'+partialTpl+'</div>');
 
 		RCAP.setTimer();
 	};
@@ -86,6 +102,7 @@ class JulienDRightClickAlert extends KokenPlugin {
 		overflow: hidden;
 		font-size:10px;
 		color:#f5f6f8;
+		width:{$box_width}px;
 	}
 	#rcap-context .rcap-message{
 		padding:5px 10px;

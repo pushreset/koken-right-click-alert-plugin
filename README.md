@@ -22,6 +22,8 @@ Tested on <a href="http://koken.me/">Koken</a> v0.8.5 with <del>Chastain</del> a
 
 <li><strong>Custom selector</strong> : Custom jquery selector to target image on your template. By default: empty.</li>
 
+<li><strong>Box width</strong> : Set in pixels the width of the message box. By default: 320 pixels.</li>
+
 </ul>
 
 <h3>Examples</h3>
